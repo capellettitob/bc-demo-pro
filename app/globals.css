@@ -380,11 +380,33 @@ button { font-family: inherit; cursor: pointer; }
   border-radius: 10px;
 }
 @media (max-width: 700px) {
+  /* Phone: stack vertically — cycling photo as a rectangle on top, the full
+     text block below it. (Desktop keeps the side-by-side layout above.) */
+  .hero {
+    padding: 92px 0 56px;
+    min-height: 0;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
   .hero-photo {
-    top: 130px;
-    bottom: 60px;
-    width: 42%;
-    border-radius: 8px;
+    /* Relative (not static) so the absolutely-positioned slides stay
+       contained by this box; static would let them resolve to .hero and
+       fill the whole section. */
+    position: relative;
+    order: -1;
+    flex: 0 0 auto;
+    top: auto;
+    bottom: auto;
+    right: auto;
+    width: auto;
+    height: 64vw;
+    max-height: 380px;
+    min-height: 240px;
+    aspect-ratio: auto;
+    margin: 0 var(--gutter);
+    border-radius: 10px;
   }
 }
 
@@ -430,9 +452,15 @@ button { font-family: inherit; cursor: pointer; }
   padding-right: 28px;
 }
 @media (max-width: 700px) {
+  .hero-text-wrap {
+    position: static;
+    min-height: 0;
+    display: block;
+  }
   .hero-text {
-    width: 58%;
-    padding-right: 12px;
+    width: 100%;
+    max-width: none;
+    padding-right: 0;
   }
 }
 

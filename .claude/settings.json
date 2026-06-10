@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"from PIL import Image; im=Image.open\\('/tmp/mobile_cdp.png'\\); im.resize\\(\\(im.width//3, im.height//3\\)\\).save\\('/tmp/mobile_cdp_small.png'\\)\")",
+      "Bash(node both.mjs)",
+      "Bash(python3 -c \"from PIL import Image; im=Image.open\\('/tmp/both.png'\\); im.resize\\(\\(im.width//2,im.height//2\\)\\).save\\('/tmp/both_small.png'\\); print\\('saved', im.size\\)\")"
+    ]
+  }
+}
