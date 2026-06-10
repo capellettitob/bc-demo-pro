@@ -67,11 +67,17 @@ export default function Gallery() {
           </a>
         ))}
 
-        {/* Branded strip closing the mosaic — full-width, not a link. */}
-        <div className="tile tile-logo" role="listitem">
+        {/* Branded strip closing the mosaic — doubles as the "about" entry,
+            with the same hover wash as the photo tiles. */}
+        <a href="#" className="tile tile-logo" role="listitem">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/logos/logo-brown-mark.png" alt="Beauty Concept" loading="lazy" />
-        </div>
+          <div className="tile-overlay" aria-hidden="true">
+            <span className="label">Chi siamo</span>
+            <span className="scopri">Scopri</span>
+          </div>
+          <span className="tile-mobile-label">Chi siamo</span>
+        </a>
       </div>
     </section>
   );
