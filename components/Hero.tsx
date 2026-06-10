@@ -95,12 +95,12 @@ export default function Hero() {
       {/* Text column — contained, sits on the left half of the page. */}
       <div className="hero-text-wrap">
         <div className="hero-text">
+          <p className="hero-eyebrow">Centro estetico · Cesena</p>
           <h1 className="hero-headline">
-            <span>Spazio</span>
-            <span>alla</span>
-            <span>bellezza.</span>
+            <span>Beauty</span>
+            <span>Concept</span>
           </h1>
-          <p className="hero-subhead">Centro estetico</p>
+          <p className="hero-subhead">Spazio alla bellezza.</p>
           <p className="hero-sub">
             Unghie, viso e cura della persona, in uno spazio luminoso e
             minimale nel cuore di Cesena.
